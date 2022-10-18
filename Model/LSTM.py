@@ -147,7 +147,7 @@ plt.semilogx(lr_history.history['lr'], lr_history.history['loss'])
 def create_model():
   model = create_uncompiled_model()
   model.compile(loss = tf.keras.losses.Huber(),
-                optimizer =tf.keras.optimizers.SGD(lr=7e-4, momentum=0.9),
+                optimizer =tf.keras.optimizers.SGD(lr=7e-3, momentum=0.9),
                 metrics = ['mae'])
   return model
 
